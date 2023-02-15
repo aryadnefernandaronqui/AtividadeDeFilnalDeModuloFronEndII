@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recados</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@300;500&family=Source+Sans+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="bg-img-recados vh-100 vw-100">
+    <main class="h-100">
+      <div class="container-fluid h-100 w-100">
+        <div class="row h-25 justify-content-around">
+          <div class="col-12 col-md-3 d-flex">
+            <section>
+              <h1>
+                meus <br />
+                recados
+              </h1>
+            </section>
+          </div>
+
+          <div class="col-12 col-md-6 d-flex">
+            <form id="formulario-tarefa ">
+              <div class="col-12 col-md-4">
+                <input
+                  id="tarefa"
+                  class="form-control border border-3 text-center p-3 position-absolute"
+                  required
+                  type="text"
+                  placeholder="tarefa"
+                />
+              </div>
+
+              <div class="col-12 col-md-6">
+                <input
+                  id="descricao"
+                  class="form-control border border-3 text-center p-3 position-absolute"
+                  type="text"
+                  placeholder="descrição"
+                />
+              </div>
+              <div class="col-12 col-md-2">
+                <input
+                  class="btn btn-salvar border border-3 position-absolute mt-2 p-2 rounded-pill"
+                  id="salvar"
+                  type="submit"
+                  value="salvar"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="col-12 col-md-3"></div>
+        </div>
+
+        <div class="row h-50 w-100">
+          <div class="col">
+            <div class="row h-50 w-75">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col-1" class="coluna-numero">#</th>
+                    <th scope="col-3" class="coluna-tarefa">tarefa</th>
+                    <th scope="col-6" class="coluna-descricao">descrição</th>
+                    <th scope="col-2" class="coluna-acao">ação</th>
+                  </tr>
+                </thead>
+                <tbody id="tabela-tarefa"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="row h-25">
+          <div class="offset-10 col-12 col-md-2">
+            <div>
+              <i
+                class="bi bi-door-closed-fill icon-exit icon"
+                onclick="sairDaAplicacao()"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="modal-editar"
+          tabindex="-1"
+          aria-labelledby="modalEditar"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalEditarTarefa">
+                  editar tarefa
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <input
+                  id="editar-tarefa"
+                  class="form-control my3"
+                  required
+                  type="text"
+                  placeholder="tarefa"
+                />
+                <input
+                  id="editar-descricao"
+                  class="form-control my3"
+                  type="text"
+                  placeholder="descrição"
+                />
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="botao-cancelar-popup"
+                  data-bs-dismiss="modal"
+                >
+                  cancelar
+                </button>
+                <button
+                  type="button"
+                  id="btn-salvar-edicao"
+                  class="botao-salvar-popup"
+                >
+                  salvar alterações
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./recados.js"></script>
+  </body>
+</html>
