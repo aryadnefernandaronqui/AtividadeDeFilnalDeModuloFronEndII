@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Source Sans Pro", sans-serif;
+  position: relative;
+}
+
+.bg-img-login {
+  background-image: url(./imagens/imagemPaginaInicial.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+.bg-img-index {
+  background-image: url(./imagens/PaginaCadastro.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+.bg-img-recados {
+  background-image: url(./imagens/imagemPaginaRecado.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+form {
+  margin-top: 10%;
+  width: 100%;
+}
+
+.form-login form [type="submit"] {
+  background-color: rgb(255 80 91);
+  width: 50%;
+}
+
+.form-login form [type="submit"]:hover {
+  background-color: rgb(56 90 101);
+  color: rgb(255 80 91);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(56 90 101);
+}
+a:hover {
+  color: rgb(255 80 91);
+}
+
+@media screen and (max-width: 768px) {
+  .bg-hide {
+    display: none;
+  }
+  .bg-mobile-login {
+    background-image: url(./imagens/caderno.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+  }
+  .bg-mobile-index {
+    background-image: url(./imagens/Checklist.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .form-cadastro {
+    position: absolute;
+    bottom: 10%;
+    width: 52%;
+  }
+  .icon-mobile {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 1%;
+    left: 37%;
+  }
+  .form-login {
+    position: absolute;
+    bottom: 15%;
+    width: 52%;
+  }
+}
+
+.vaso-flores {
+  height: 50%;
+  width: 15%;
+  margin-left: 35%;
+  margin-top: 24.5%;
+}
+.flores2 {
+  animation: flores2 10s;
+  animation-iteration-count: 1;
+}
+
+@keyframes flores2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.flores3 {
+  animation: flores3 15s;
+  animation-iteration-count: 1;
+}
+
+@keyframes flores3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.gears1 {
+  height: 10%;
+  width: 5%;
+  margin-left: 5%;
+  margin-top: 7%;
+  animation: engrenagem1 10s infinite linear;
+}
+
+@keyframes engrenagem1 {
+  0% {
+    rotate: 360deg;
+  }
+}
+
+.gears2 {
+  height: 7%;
+  width: 3.5%;
+  margin-left: 9.8%;
+  margin-top: 9%;
+  animation: engrenagem2 5s infinite linear;
+}
+
+@keyframes engrenagem2 {
+  0% {
+    rotate: -360deg;
+  }
+}
+.gears3 {
+  height: 7%;
+  width: 3.5%;
+  margin-left: 3.5%;
+  margin-top: 11.6%;
+  animation: engrenagem3 7s infinite linear;
+}
+
+@keyframes engrenagem3 {
+  0% {
+    rotate: 360deg;
+  }
+}
+
+.icon {
+  font-size: 4rem;
+  color: rgb(255 80 91);
+  position: absolute;
+}
+.icon-home {
+  margin-left: 40%;
+}
+.icon-exit {
+  margin-top: 4.5%;
+  margin-left: 5%;
+}
+
+#tarefa {
+  left: 26%;
+  width: 18%;
+}
+
+#descricao {
+  width: 30%;
+  left: 45%;
+}
+
+#salvar {
+  color: rgb(56 90 101);
+  background-color: rgb(255 80 91);
+  width: 8%;
+  left: 76%;
+}
+
+table {
+  background-color: rgba(245, 245, 245, 0.916);
+  margin-left: 18%;
+}
+
+.botao-acao {
+  border-style: solid;
+  height: 35px;
+  width: 35px;
+  margin-left: 2.5%;
+}
+
+#botao-editar {
+  background-color: rgb(255 80 91);
+  color: rgb(56 90 101);
+}
+
+#botao-excluir {
+  background-color: rgb(56 90 101);
+  color: rgb(255 80 91);
+}
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+.botao-cancelar-popup {
+  background-color: rgb(56 90 101);
+  color: rgb(255 80 91);
+  width: 100px;
+  border-style: solid;
+}
+.botao-salvar-popup {
+  background-color: rgb(255 80 91);
+  color: rgb(56 90 101);
+  width: 170px;
+  border-style: solid;
+}
