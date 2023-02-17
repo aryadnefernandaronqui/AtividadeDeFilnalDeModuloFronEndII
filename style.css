@@ -32,8 +32,12 @@ body {
 }
 
 form {
-  margin-top: 10%;
+  /* margin-top: 10%; */
   width: 100%;
+}
+
+#formulario-tarefa {
+  margin-top: 0% !important;
 }
 
 .form-login form [type="submit"] {
@@ -71,21 +75,11 @@ a:hover {
     background-position: center;
   }
 
-  .form-cadastro {
-    position: absolute;
-    bottom: 10%;
-    width: 52%;
-  }
   .icon-mobile {
+    font-size: 1rem;
     position: absolute;
-    font-size: 3rem;
     bottom: 1%;
     left: 37%;
-  }
-  .form-login {
-    position: absolute;
-    bottom: 15%;
-    width: 52%;
   }
 }
 
@@ -176,26 +170,13 @@ a:hover {
   margin-left: 5%;
 }
 
-#tarefa {
-  left: 26%;
-  width: 18%;
-}
-
-#descricao {
-  width: 30%;
-  left: 45%;
-}
-
 #salvar {
   color: rgb(56 90 101);
   background-color: rgb(255 80 91);
-  width: 8%;
-  left: 76%;
 }
 
 table {
   background-color: rgba(245, 245, 245, 0.916);
-  margin-left: 18%;
 }
 
 .botao-acao {
@@ -213,10 +194,6 @@ table {
 #botao-excluir {
   background-color: rgb(56 90 101);
   color: rgb(255 80 91);
-}
-
-.form-control {
-  margin-bottom: 15px;
 }
 
 .botao-cancelar-popup {

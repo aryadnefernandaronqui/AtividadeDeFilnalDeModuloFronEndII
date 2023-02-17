@@ -30,9 +30,9 @@
   <body class="bg-img-recados vh-100 vw-100">
     <main class="h-100">
       <div class="container-fluid h-100 w-100">
-        <div class="row h-25 justify-content-around">
+        <div class="row justify-content-around">
           <div class="col-12 col-md-3 d-flex">
-            <section>
+            <section class="m-4">
               <h1>
                 meus <br />
                 recados
@@ -40,49 +40,53 @@
             </section>
           </div>
 
-          <div class="col-12 col-md-6 d-flex">
-            <form id="formulario-tarefa ">
-              <div class="col-12 col-md-4">
-                <input
-                  id="tarefa"
-                  class="form-control border border-3 text-center p-3 position-absolute"
-                  required
-                  type="text"
-                  placeholder="tarefa"
-                />
-              </div>
+          <div class="col">
+            <div class="container-fluid h-100">
+              <form id="formulario-tarefa" class="h-100">
+                <div class="row h-100 align-items-center">
+                  <div class="col-12 col-md-4">
+                    <input
+                      id="tarefa"
+                      class="form-control border border-3 text-center p-3"
+                      required
+                      type="text"
+                      placeholder="tarefa"
+                    />
+                  </div>
 
-              <div class="col-12 col-md-6">
-                <input
-                  id="descricao"
-                  class="form-control border border-3 text-center p-3 position-absolute"
-                  type="text"
-                  placeholder="descrição"
-                />
-              </div>
-              <div class="col-12 col-md-2">
-                <input
-                  class="btn btn-salvar border border-3 position-absolute mt-2 p-2 rounded-pill"
-                  id="salvar"
-                  type="submit"
-                  value="salvar"
-                />
-              </div>
-            </form>
+                  <div class="col-12 col-md-6">
+                    <input
+                      id="descricao"
+                      class="form-control border border-3 text-center p-3"
+                      type="text"
+                      placeholder="descrição"
+                    />
+                  </div>
+                  <div class="col-12 col-md-2">
+                    <input
+                      class="btn btn-salvar border border-3 mt-2 p-2 rounded-pill"
+                      id="salvar"
+                      type="submit"
+                      value="salvar"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
           <div class="col-12 col-md-3"></div>
         </div>
 
-        <div class="row h-50 w-100">
+        <div class="row">
           <div class="col">
-            <div class="row h-50 w-75">
+            <div class="container">
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col-1" class="coluna-numero">#</th>
-                    <th scope="col-3" class="coluna-tarefa">tarefa</th>
-                    <th scope="col-6" class="coluna-descricao">descrição</th>
-                    <th scope="col-2" class="coluna-acao">ação</th>
+                    <th class="coluna-numero">#</th>
+                    <th class="coluna-tarefa">tarefa</th>
+                    <th class="coluna-descricao">descrição</th>
+                    <th class="coluna-acao">ação</th>
                   </tr>
                 </thead>
                 <tbody id="tabela-tarefa"></tbody>
@@ -91,15 +95,11 @@
           </div>
         </div>
 
-        <div class="row h-25">
-          <div class="offset-10 col-12 col-md-2">
-            <div>
-              <i
-                class="bi bi-door-closed-fill icon-exit icon"
-                onclick="sairDaAplicacao()"
-              ></i>
-            </div>
-          </div>
+        <div>
+          <i
+            class="bi bi-door-closed-fill icon-exit icon icon-mobile"
+            onclick="sairDaAplicacao()"
+          ></i>
         </div>
         <div
           class="modal fade"
