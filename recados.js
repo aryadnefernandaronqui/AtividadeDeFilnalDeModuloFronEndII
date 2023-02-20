@@ -2,14 +2,17 @@ const modalEditar = new bootstrap.Modal("#modal-editar");
 
 const usuarioLogado = buscarDadosDoLocalStorage("usuarioLogado");
 
-/* document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   if (!usuarioLogado.email) {
     window.location.href = "./login.html";
   } else {
     tarefaNoHTML();
   }
 });
- */
+
+const toastAlertas = document.getElementById("toast-editar-excluir");
+const toastBS = new bootstrap.Toast(toastAlertas);
+
 const tbody = document.getElementById("tabela-tarefa");
 const formularioHTML = document.getElementById("formulario-tarefa");
 
@@ -88,6 +91,8 @@ function salvarEdicao(indice) {
   usuarioLogado.recados[indice].tarefa = editandoTarefa;
   usuarioLogado.recados[indice].descricao = editandoDescricao;
 
+  mostrarToast("success", "Tarefa editada com sucesso.");
+
   guardarNoLocalStorage("usuarioLogado", usuarioLogado);
 
   tarefaNoHTML();
@@ -108,6 +113,8 @@ function salvarTarefa() {
   );
   listaUsuarios[acharUsuario].recados = usuarioLogado.recados;
 
+  mostrarToast("success-subtle", "Tarefa salva com sucesso.");
+
   guardarNoLocalStorage("usuarios", listaUsuarios);
 }
 
@@ -115,10 +122,26 @@ function apagarTarefa(indice) {
   let confirma = window.confirm("deseja excluir?");
   if (confirma) {
     usuarioLogado.recados.splice(indice, 1);
+
+    mostrarToast("danger", "Tarefa excluída.");
     guardarNoLocalStorage("usuarioLogado", usuarioLogado);
     const tr = document.getElementById(indice);
     tr.remove;
 
     tarefaNoHTML();
   }
+}
+
+function mostrarToast(tipo, msg) {
+  toastAlertas.classList.add(`text-bg-${tipo}`);
+
+  const msgAlerta = document.getElementById("toast-msg");
+  msgAlerta.innerHTML = msg;
+
+  toastBS.show();
+
+  setTimeout(() => {
+    toastBS.hide();
+    toastAlertas.classList.remove(`text-bg-${tipo}`);
+  }, 5000);
 }
